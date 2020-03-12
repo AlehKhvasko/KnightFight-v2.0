@@ -4,7 +4,8 @@ function randomNum(min, max) {
   }
 
   function knight(attack,accuracy,headHealth, bodyHealth,legsHealth) {
-      this.attack = randomNum(5,10);
+    //only range between 0-3  
+    this.attack = Math.random()*3;
       this.accuracy = 0.6;
       this.headHealth = randomNum(5,10);
       this.bodyHealth = randomNum(5,10);
@@ -17,8 +18,10 @@ function randomNum(min, max) {
   let enemyKnight4 = new knight();
   let enemyKnight5 = new knight();
 
+let yourAttack = Math.random()*3;
+
   let yourKnight ={
-    attack:20,
+    attack:yourAttack,
     accuracy: 0.7,
     headHealth:20,
     bodyHealth:20,
