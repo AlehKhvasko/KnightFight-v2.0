@@ -36,6 +36,7 @@ Plans to do.
 
 
 ![alt text](https://github.com/AlehKhvasko/KnightFight-v2.0/blob/master/assets/Screen%20Shot%202020-03-12%20at%209.17.55%20AM.png "My notes")
+![alt text](https://github.com/AlehKhvasko/KnightFight-v2.0/blob/master/assets/IMG_9894%202.png "Ugly notes")
 
 
 
