@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     list-style-type:none;
+
+    font-family: 'MedievalSharp', cursive; 
 }
 #wrapper {
     background-image: url(../images/dayCloudsSky.gif);
@@ -72,13 +74,13 @@
     animation-timing-function: initial;
 }
 
-h1 {
-    font-size: 3rem;
-    padding:2vh 0;
+h1 {   
+    font-size: 3.4rem;
     text-align: center;
     color: rgb(26, 15, 15);
-    text-shadow:5px 5px 8px rgb(187, 176, 176);
+    text-shadow:1px 1px 2px rgb(245, 238, 238);
     letter-spacing: .5rem;
+    color: rgba(187, 8, 8, 0.849);
     
 }
 #container {
@@ -103,12 +105,13 @@ h1 {
     animation-timing-function: initial;
 }
 #scoreBoard {
+    margin: 2vh 0 0 0;
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
     align-items: center;
-    width: 48vw;
-    height: 40vh;
+    width: 45vw;
+    height: 55vh;
     border-radius: 50%;
     background-image:url(../images/twoKnights.gif);
     opacity: 0.82;
@@ -122,18 +125,66 @@ h1 {
     font-size: 1rem;
     letter-spacing: 0.2rem;
     text-shadow: 2px 2px 3px black;
+    font-size: 2rem;
 }
 #scoreBoard_child {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     text-align: center;
 }
-.scoreBoard_menu > p {
+#user_head__img {
+    margin: 0 8vw;
+    background-image: url(../images/w_3_0070628_medieval-barbute-combat-helmet_550.png);
+    height: 8vh;
+    width: 6vw;
+    background-size: cover;
+}
+
+#user_body__img {
+    margin: 0 8vw;
+    background-image: url(../images/chestPlateSilver.png);
+    height: 8vh;
+    width: 6vw;
+    background-size: cover;
+}
+#user_legs__img {
+    margin: 0 8vw;
+    background-image: url(../images/leg\ armour.png);
+    height: 9vh;
+    width: 6vw;
+    background-size: cover;
+}
+
+.scoreBoard_menu > div {
     padding: .2vh;
     text-shadow: 1px 1px 2px rgb(37, 11, 11);
     text-transform: uppercase;
 }
+.scoreNum {
+    color: rgb(20, 211, 36);
+    text-shadow: 2px 2px 4px rgb(46, 44, 44);
+    font-weight: 900;
+}
+
+#yourKills {
+    margin-top:-15vh;
+    background-image: url(../images/skeletonHead.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 10vh;
+    width: 11vw;
+}
+#yourKillsText {
+    font-style: italic;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: rgba(255, 0, 0, 0.418);
+    
+ }
+
 
 #compKnight {
     height: 30vw;
@@ -148,7 +199,7 @@ h1 {
     background-position: center;
 }
 #yourKills {
-    padding: 1rem;
+    padding: .9rem;
 }
 
 .users_body {
