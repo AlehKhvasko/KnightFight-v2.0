@@ -20,14 +20,18 @@ function randomNum(min, max) {
 
 let yourAttack = Math.random()*3;
 
-  let yourKnight ={
+  let yourKnight = {
     attack:yourAttack,
     accuracy: 0.7,
     headHealth:20,
-    bodyHealth:20,
-    legsHealth:20
+    bodyHealth:22,
+    legsHealth:21
   }
 
+  document.getElementById("scoreNumHead").innerHTML = yourKnight.headHealth;
+  document.getElementById("scoreNumBody").innerHTML = yourKnight.bodyHealth;
+  document.getElementById("scoreNumLegs").innerHTML = yourKnight.legsHealth;
+  
   let knights = [enemyKnight1,enemyKnight2,enemyKnight3,enemyKnight4,enemyKnight5];
 
   let n = 0;
@@ -42,6 +46,7 @@ let yourAttack = Math.random()*3;
   let compRandom = Math.random(3)+1;
 
   function attack () {
+      usersChoice = 1;
       //check you're not dead
     if (yourKnight.bodyHealth > 0 & yourKnight.headHealth > 0 & yourKnight.legsHealth > 0) {
         // check comp is alive
@@ -51,7 +56,8 @@ let yourAttack = Math.random()*3;
                 // check user's choice
                 switch(usersChoice) {
                     case 1:
-                        enemyKnight[n].bodyHealth - yourKnight.attack;
+                        let bodyAttack = enemyKnight[n].bodyHealth - yourKnight.attack;
+                        Document.getElementById("bodyNum").innerHtml = bodyAttack;
                     case 2:
                         enemyKnight[n].headHealth - yourKnight.attack;
                     case 3:
