@@ -74,7 +74,26 @@
     animation-timing-function: initial;
 }
 
-h1 {   
+#swordLeft {
+    margin: 3vh 0 -1vh 10vw;
+    background-image: url(../images/sword-clipart-animation-6.gif);
+    background-size: contain;
+    height: 13vh;
+    width: 10vw;
+    background-repeat: no-repeat;
+}
+#swordRight {
+    margin: 3vh 10vw -1vh 0vw;
+    background-image: url(../images/sword-clipart-animation-6.gif);
+    background-size: contain;
+    height: 13vh;
+    width: 10vw;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    display: flex;
+    flex-flow: row nowrap;  
     font-size: 3.4rem;
     text-align: center;
     color: rgb(26, 15, 15);
