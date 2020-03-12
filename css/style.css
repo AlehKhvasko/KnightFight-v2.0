@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     list-style-type:none;
-
     font-family: 'MedievalSharp', cursive; 
 }
 #wrapper {
@@ -81,6 +80,8 @@
     height: 13vh;
     width: 10vw;
     background-repeat: no-repeat;
+    animation: swordDrop 5s linear 0s;
+    animation-timing-function: initial;
 }
 #swordRight {
     margin: 3vh 10vw -1vh 0vw;
@@ -89,6 +90,8 @@
     height: 13vh;
     width: 10vw;
     background-repeat: no-repeat;
+    animation: swordDrop 5s linear 0s;
+    animation-timing-function: initial;
 }
 
 h1 {
@@ -175,8 +178,8 @@ h1 {
     background-size: cover;
 }
 
-.scoreBoard_menu > div {
-    padding: .2vh;
+.scoreBoard_menu > p {
+    padding: .4rem;
     text-shadow: 1px 1px 2px rgb(37, 11, 11);
     text-transform: uppercase;
 }
@@ -187,13 +190,14 @@ h1 {
 }
 
 #yourKills {
-    margin-top:-15vh;
+    margin:-15vh 0 1vh 0;
     background-image: url(../images/skeletonHead.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 10vh;
-    width: 11vw;
+    height: 5vh;
+    width: 3vw;
+    animation: skullRotate 10s ease-in-out 5s infinite;
 }
 #yourKillsText {
     font-style: italic;
@@ -288,5 +292,18 @@ h1 {
 
 }
 }
+@keyframes swordDrop {
+    0% {
+        transform: translateY(-205px);
+}
+    90% {
+        transform: translateY(0px);
 
-/* test */
+}
+}
+@keyframes skullRotate {
+    5   0% {
+        transform: rotateY(90deg);
+}
+}
+
