@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knight Fight</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <nav id="navBar">
+                <ul>
+                    <li id="nav1" >Home</li>
+                    <li id="nav2" >History</li>
+                    <li id="nav3" >Rules</li>
+                    <li id="nav4" >About</li>
+                </ul>
+            </nav>
+            <h1>Welcome to Knight Fight Tournament</h1>
+            <div id="container">
+                <div id="yourKnight">
+                    <div class="users_body" id="user_head">head</div>
+                    <div class="users_body" id="user_body">body</div>
+                    <div class="users_body" id="user_legs">legs</div>
+                </div>
+                <div id="scoreBoard">
+                    <div id="scoreBoard_child">
+                        <div class="scoreBoard_menu" id="userBoard">
+                            <p>img head.health <p>num</p> </p>
+                            <p>img body.health <p>num</p></p>
+                            <p>img legs.health <p>num</p></p>
+                        </div>
+                        <div class="scoreBoard_menu" id="compBoard">
+                            <p>img head.health <p>num</p></p>
+                            <p>img body.health <p>num</p></p>
+                            <p>img legs.health <p>num</p></p>
+                        </div>
+                    </div>
+                    <div id="yourKills">Kills you made</div>
+                </div>
+                <div id="compKnight">
+                    <div class="users_body" id="comp_head">head</div>
+                    <div class="users_body" id="comp_body">body</div>
+                    <div class="users_body" id="comp_legs">legs</div>
+                </div>
+            </div>
+            <div id="knights">
+                <div id="leftKnight">
+                </div>
+                <div id="rightKnight">
+                </div>
+            </div>
+            <div id="mountainsLeft"></div>
+            <div id="mountainsRight"></div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
