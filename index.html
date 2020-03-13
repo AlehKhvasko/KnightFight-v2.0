@@ -10,7 +10,7 @@
 <body>
     <div id="wrapper">
         <div id="header">
-            <h1> <div id="swordLeft"></div> Welcome to Knight Fight Tournament<div id="swordRight"></div></h1> 
+            <h1> <div id="swordLeft"></div> Welcome to Knight Tournament<div id="swordRight"></div></h1> 
             <div id="container">
                 <div id="yourKnight">
                     <div class="users_body" id="user_head">head</div>
@@ -20,14 +20,16 @@
                 <div id="scoreBoard">
                     <div id="scoreBoard_child">
                         <div class="scoreBoard_menu" id="userBoard">
-                            <div id="user_head__img"> </div><p class="scoreNum">0</p>
-                            <div id="user_body__img"> </div><p class="scoreNum">0</p>
-                            <div id="user_legs__img"> </div><p class="scoreNum">0</p>
+                            <div class="user_head__img"  > </div><p class="scoreNum" id="scoreNumHead">0</p>
+                            <div class="user_body__img"  > </div><p class="scoreNum"
+                            id="scoreNumBody">0</p>
+                            <div class="user_legs__img"  > </div><p class="scoreNum"
+                            id="scoreNumLegs">0</p>
                         </div>
                         <div class="scoreBoard_menu" id="compBoard">
-                            <div id="user_head__img"> </div><p class="scoreNum">0</p>
-                            <div id="user_body__img"> </div><p class="scoreNum">0</p>
-                            <div id="user_legs__img"> </div><p class="scoreNum">0</p>
+                            <div class="user_head__img"  id="comp_head__img" onclick="attack()"> </div><p class="scoreNum" id="scoreCompHead">0</p>
+                            <div class="user_body__img" id="comp_body__img"> </div><p class="scoreNum" id="scoreCompBody" onclick="attack()">0</p>
+                            <div class="user_legs__img" id="comp_legs__img"> </div><p class="scoreNum" id="scoreCompLegs" onclick="attack()">0</p>
                         </div>
                     </div>
                     <div id="yourKills"></div>
@@ -35,9 +37,9 @@
                     <div id="yourKillsText">kills</div>
                 </div>
                 <div id="compKnight">
-                    <div class="users_body" id="comp_head">head</div>
-                    <div class="users_body" id="comp_body">body</div>
-                    <div class="users_body" id="comp_legs">legs</div>
+                    <div class="users_body" id="comp_head" onclick="attack()">head</div>
+                    <div class="users_body" id="comp_body" onclick="attack()">body</div>
+                    <div class="users_body" id="comp_legs" onclick="attack()">legs</div>
                 </div>
             </div>
             <div id="knights">

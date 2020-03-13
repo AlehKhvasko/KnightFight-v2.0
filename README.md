@@ -4,7 +4,7 @@
 You playing against computer.
  Version 1.0 
 
-Your knight is on a left side of the screen, computer on a right. You will see life's of your and his knight, which are splitted between head/body/legs. You could choose what part of opponent you want to attack. When life of character reaches 0, he dies. Also you have count of kills. ACcuracy influence on your attack, if its randomly more then 0.7, your attack successful. If less you miss.
+Your knight is on a left side of the screen, computer is on a right. You will see life's of yours and his knight, which are splitted between head/body/legs. You could choose what part of opponent you wanna attack. When life of the character reaches 0, he dies. Also you have count of kills. Accuracy is important and influences on your attack.If its randomly more then 0.7, your attack successful, if less you miss.
 
 To do list:
 

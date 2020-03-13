@@ -155,7 +155,7 @@ h1 {
     justify-content: space-between;
     text-align: center;
 }
-#user_head__img {
+.user_head__img {
     margin: 0 8vw;
     background-image: url(../images/w_3_0070628_medieval-barbute-combat-helmet_550.png);
     height: 8vh;
@@ -163,19 +163,42 @@ h1 {
     background-size: cover;
 }
 
-#user_body__img {
+.user_body__img {
     margin: 0 8vw;
     background-image: url(../images/chestPlateSilver.png);
     height: 8vh;
     width: 6vw;
     background-size: cover;
 }
-#user_legs__img {
+.user_legs__img {
     margin: 0 8vw;
     background-image: url(../images/leg\ armour.png);
     height: 9vh;
     width: 6vw;
     background-size: cover;
+}
+
+#comp_head:hover, #comp_body:hover, #comp_legs:hover {
+    box-shadow:5px 5px 10px rgb(63, 216, 63);
+    background-color: rgba(128, 128, 128, 0.182);
+    cursor: pointer;
+}
+
+#comp_head:active, #comp_body:active, #comp_legs:active {
+    border: 2px solid rgba(218, 210, 210, 0.294);
+    background-color: rgba(11, 7, 61, 0.137);
+    box-shadow:.2px .2px 4px rgba(153, 145, 31, 0.986)
+}
+#comp_head__img:hover, #comp_legs__img:hover, #comp_body__img:hover {
+    box-sizing: border-box;
+    box-shadow:1px 1px 1px 2px rgba(119, 216, 63, 0.841);
+    background-color: rgba(128, 128, 128, 0.2);
+    cursor: pointer;
+}
+#comp_head__img:active, #comp_legs__img:active, #comp_body__img:active {
+    border: .8px solid rgba(218, 210, 210, 0.094);
+    background-color: rgba(31, 39, 32, 0.137);
+    box-shadow:1.5px 1.5px 1px rgba(77, 76, 68, 0.986)
 }
 
 .scoreBoard_menu > p {
@@ -302,7 +325,7 @@ h1 {
 }
 }
 @keyframes skullRotate {
-    5   0% {
+    0% {
         transform: rotateY(90deg);
 }
 }
