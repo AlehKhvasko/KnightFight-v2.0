@@ -27,19 +27,19 @@
                             id="scoreNumLegs">0</p>
                         </div>
                         <div class="scoreBoard_menu" id="compBoard">
-                            <div class="user_head__img"  id="comp_head__img" onclick="attack()"> </div><p class="scoreNum" id="scoreCompHead">0</p>
-                            <div class="user_body__img" id="comp_body__img"> </div><p class="scoreNum" id="scoreCompBody" onclick="attack()">0</p>
-                            <div class="user_legs__img" id="comp_legs__img"> </div><p class="scoreNum" id="scoreCompLegs" onclick="attack()">0</p>
+                            <div class="user_head__img"  id="comp_head__img" onclick=" user_btn1 (); attack();"> </div><p class="scoreNum" id="scoreCompHead">0</p>
+                            <div class="user_body__img" id="comp_body__img" onclick="user_btn2(); attack(); "> </div><p class="scoreNum" id="scoreCompBody">0</p>
+                            <div class="user_legs__img" id="comp_legs__img" onclick=" user_btn3 (); attack();"> </div><p class="scoreNum" id="scoreCompLegs">0</p>
                         </div>
                     </div>
                     <div id="yourKills"></div>
-                    <div id="yourKillsNum">2</div>
+                    <div id="yourKillsNum">0</div>
                     <div id="yourKillsText">kills</div>
                 </div>
                 <div id="compKnight">
-                    <div class="users_body" id="comp_head" onclick="attack()">head</div>
-                    <div class="users_body" id="comp_body" onclick="attack()">body</div>
-                    <div class="users_body" id="comp_legs" onclick="attack()">legs</div>
+                    <div class="users_body" id="comp_head" onclick=" user_btn1 (); attack();">head</div>
+                    <div class="users_body" id="comp_body" onclick=" user_btn2 (); attack();">body</div>
+                    <div class="users_body" id="comp_legs" onclick=" user_btn3 (); attack();">legs</div>
                 </div>
             </div>
             <div id="knights">
