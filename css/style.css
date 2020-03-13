@@ -44,6 +44,11 @@
     z-index: 2;
 }
 
+.AttackInfo {
+    text-align: center;
+    margin: 18vh auto;
+}
+
 
 #leftKnight {
     background-image: url(../images/vectorLeftKnightwithSword.gif);
@@ -210,6 +215,20 @@ h1 {
     color: rgb(20, 211, 36);
     text-shadow: 2px 2px 4px rgb(46, 44, 44);
     font-weight: 900;
+}
+
+#battle_info {
+    height: 45vh;
+    width: 11vw;
+    text-align: center;
+    padding: .1rem;
+    font-size: 1.4rem;
+    letter-spacing: .2rem;
+}
+
+#battle_info > p {
+    text-align: center;
+    margin: 15px auto;
 }
 
 #yourKills {

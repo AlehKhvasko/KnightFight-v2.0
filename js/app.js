@@ -6,9 +6,7 @@ function randomNum(min, max) {
   function knight(attack,accuracy,headHealth, bodyHealth,legsHealth) {
     //only range between 0-3  
     this.attack = Math.floor((Math.random()*3)+1);
-    //
-    console.log(this.attack);
-    //
+
     this.accuracy = 0.6;
     this.headHealth = randomNum(5,10);
     this.bodyHealth = randomNum(5,10);
@@ -31,7 +29,7 @@ let yourAttack = Math.floor((Math.random()*3)+1);
     legsHealth:21
   }
 
-  let knights = [enemyKnight1,enemyKnight2,enemyKnight3,enemyKnight4,enemyKnight5];
+let knights = [enemyKnight1,enemyKnight2,enemyKnight3,enemyKnight4,enemyKnight5];
   
 let n = 0;
 // knights[n].headHealth display this in html
@@ -43,10 +41,12 @@ document.getElementById("scoreNumLegs").innerHTML = yourKnight.legsHealth;
 document.getElementById("scoreCompHead").innerHTML = knights[n].headHealth;
 document.getElementById("scoreCompBody").innerHTML = knights[n].bodyHealth;
 document.getElementById("scoreCompLegs").innerHTML = knights[n].legsHealth;
+//user and player attack
+document.getElementById("attPowerUser").innerHTML = yourKnight.attack;
+document.getElementById("attPowerComp").innerHTML = knights[n].attack;
 
 
 
-let dayTime = 0;
 
 let usersChoice = null;
 function user_btn1 (){
@@ -63,9 +63,16 @@ let hitHead_comp = knights[n].headHealth;
 let hitBody_comp = knights[n].bodyHealth;
 let hitLegs_comp = knights[n].legsHealth;
 
+let dayTime = 0;
+
 function attack () {
+    // delete or finish
+    // dayTime++;
+    // if (dayTime%3 === 0 & dayTime%2 === 0) {
+    //     img.src = "";
+    // }
     console.log('invokes a function')
-      //check you're not dead
+    //check you're not dead
     if (yourKnight.bodyHealth > 0 & yourKnight.headHealth > 0 & yourKnight.legsHealth > 0) {
         console.log('checked user')
         // check comp is alive
@@ -78,19 +85,19 @@ function attack () {
                     case 1:
                         hitHead_comp -= yourKnight.attack;
                         document.getElementById("scoreCompHead").innerHTML = hitHead_comp;
-                        console.log('hit Head of comp ' + hitHead_comp);
+                        document.getElementById("user_info").innerHTML = "We att HEAD by " + yourKnight.attack;
                         compAttack();
                         break;
                     case 2:
                         hitBody_comp -= yourKnight.attack;
                         document.getElementById("scoreCompBody").innerHTML = hitBody_comp;
-                        console.log('hit Body of comp ' + hitHead_comp);
+                        document.getElementById("user_info").innerHTML = "We att BODY by " + yourKnight.attack;
                         compAttack();
                         break;
                     case 3:
                         hitBody_comp -= yourKnight.attack;
                         document.getElementById("scoreCompLegs").innerHTML = hitBody_comp;
-                        console.log('hit Legs of comp ' + hitHead_comp);
+                        document.getElementById("user_info").innerHTML = "We att LEGS by " + yourKnight.attack;
                         compAttack();
                         break;
                     default:
@@ -98,19 +105,20 @@ function attack () {
                 }
             }
             else {
-                console.log('You missed attack')
+                document.getElementById("user_info").innerHTML = "You missed attack";
+                compAttack ();
             }
         }
         else {
+            document.getElementById("user_info").innerHTML = "You killed a knight";
+            document.getElementById("comp_info").innerHTML = " R.I.P."
+            document.getElementById("rightKnight").style.opacity = "0.00003";
             n++;
             document.getElementById("yourKillsNum").innerHTML = n;
-            console.log(' ** Comp died ' + n);
-            
         }  
     }          
     else {
-       console.log('You died like a hero '); 
-       // add style of your death display none and then appear
+        document.getElementById("user_info").innerHTML = "You died like a honorable knight";
     }    
 }
 
@@ -127,23 +135,23 @@ function compAttack () {
             case 1:
                 hitHead_comp1 -= knights[n].attack;
                 document.getElementById("scoreNumHead").innerHTML = hitHead_comp1;
-                console.log("user CompHead" + hitHead_comp);
+                document.getElementById("comp_info").innerHTML = "Enemy att HEAD by " + knights[n].attack;
                 break;
             case 2:
                 hitBody_comp2 -= knights[n].attack;
                 document.getElementById("scoreNumBody").innerHTML = hitBody_comp2;
-                console.log("user CompBody" + hitBody_comp2);
+                document.getElementById("comp_info").innerHTML = "Enemy att BODY by " + knights[n].attack;
                 break;
             case 3:
                 hitLegs_comp3 -= knights[n].attack;
                 document.getElementById("scoreNumLegs").innerHTML = hitLegs_comp3;
-                console.log("user CompLegs" + hitLegs_comp3);
+                document.getElementById("comp_info").innerHTML = "Enemy att HEAD by " + knights[n].attack;
                 break;
             default:
                 break;    
         }
     }
     else {
-        console.log('computer missed');
+        document.getElementById("comp_info").innerHTML = "Enemy missed attack. ";
     }
 }

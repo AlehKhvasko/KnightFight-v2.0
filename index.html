@@ -12,6 +12,11 @@
         <div id="header">
             <h1> <div id="swordLeft"></div> Welcome to Knight Tournament<div id="swordRight"></div></h1> 
             <div id="container">
+                <ul class="AttackInfo">
+                    <li>Your</li>
+                    <li>attack:</li>
+                    <li id="attPowerUser">20</li>
+                </ul> 
                 <div id="yourKnight">
                     <div class="users_body" id="user_head">head</div>
                     <div class="users_body" id="user_body">body</div>
@@ -25,6 +30,10 @@
                             id="scoreNumBody">0</p>
                             <div class="user_legs__img"  > </div><p class="scoreNum"
                             id="scoreNumLegs">0</p>
+                        </div>
+                        <div id="battle_info">
+                            <p id="user_info"></p>
+                            <p id="comp_info"></p>
                         </div>
                         <div class="scoreBoard_menu" id="compBoard">
                             <div class="user_head__img"  id="comp_head__img" onclick=" user_btn1 (); attack();"> </div><p class="scoreNum" id="scoreCompHead">0</p>
@@ -41,6 +50,11 @@
                     <div class="users_body" id="comp_body" onclick=" user_btn2 (); attack();">body</div>
                     <div class="users_body" id="comp_legs" onclick=" user_btn3 (); attack();">legs</div>
                 </div>
+                <ul class="AttackInfo">
+                    <li>Enemies</li>
+                    <li>attack:</li>
+                    <li id="attPowerComp">10</li>
+                </ul> 
             </div>
             <div id="knights">
                 <div id="leftKnight">
