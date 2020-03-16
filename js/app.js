@@ -65,6 +65,9 @@ let hitLegs_comp = knights[n].legsHealth;
 
 let dayTime = 0;
 
+let userBlock;
+let compBlock;
+
 function attack () {
     // delete or finish
     // dayTime++;
@@ -73,12 +76,16 @@ function attack () {
     // }
     console.log('invokes a function')
     //check you're not dead
-    if (yourKnight.bodyHealth > 0 & yourKnight.headHealth > 0 & yourKnight.legsHealth > 0) {
+    if (hitHead_comp1 > 0 & hitBody_comp2 > 0 & hitLegs_comp3 > 0) {
         console.log('checked user')
         // check comp is alive
         if (hitHead_comp > 0 & hitBody_comp > 0 & hitLegs_comp > 0 ) {
             console.log('checked comp')
             // check your accuracy
+            userBlock = prompt('What part of body you want to block: 1)H for HEAD  2) B for BODY 3) L for LEGS' , 'H');
+            compBlock = Math.floor(((Math.random)*3)+1);
+            if (userBlock)
+            // compare with computer attack choice
             if (Math.random() < yourKnight.accuracy) {  
                 // check user's choice
                 switch(usersChoice) {
